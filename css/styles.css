@@ -65,14 +65,14 @@ p {
 }
 
 a {
-  color: var(--primary-color);
-  font-size: 20px;
+  color: var(--tertiary-color);
+  font-size: 22px;
   font-weight: 400;
 }
 
 a:visited {
   /* visited link */
-  color: var(--primary-color);
+  color: var(--tertiary-color);
 }
 
 a:hover, a:focus {
@@ -82,7 +82,7 @@ a:hover, a:focus {
 
 a:active {
   /* selected link */
-  color: var(--primary-color);
+  color: var(--tertiary-color);
 }
 
 .navigation-list__item--active {
