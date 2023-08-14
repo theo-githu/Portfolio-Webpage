@@ -196,7 +196,7 @@ a:active {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 30px;
   padding: 20px;
 }
@@ -281,7 +281,7 @@ a:active {
 }
 
 
-@media all and (max-width: 500px) {
+/* @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
     grid-gap: 10px;
@@ -290,9 +290,34 @@ a:active {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+} */
+
+/* Small devices (phones) */
+@media screen and (max-width: 480px) {
+  .grid {
+      grid-template-columns: 1fr; /* Single column layout */
+      gap: 10px; /* Adjust gap for smaller screens */
+      
+  }
 }
 
-@media all and (max-width: 500px) {
+/* Medium devices (tablets) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .grid {
+      grid-template-columns:  1fr; 
+      gap: 20px;
+      
+  }
+}
+
+/* Large devices (desktops) */
+@media screen and (min-width: 769px) {
+  .grid {
+      /* Keep the original grid-template-columns for larger screens */
+  }
+}
+
+/* @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
   }
@@ -310,7 +335,7 @@ a:active {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
-}
+} */
 
 
 .loading {
